@@ -7,6 +7,7 @@ import StartScreen from "./StartScreen";
 import Question from "./Question";
 import NextButton from "./NextButton";
 import Progress from "./Progress";
+import FinishScreen from "./FinishScreen";
 
 const initialState = {
   questions: [],
@@ -94,6 +95,8 @@ export default function App() {
             <NextButton dispatch={dispatch} ansewr={ansewr} />
           </>
         )}
+
+        {status === "finished" && <FinishScreen points={points} />}
       </Main>
     </div>
   );
