@@ -84,6 +84,7 @@ export default function App() {
               numQuestions={numQuestions}
               points={points}
               maxPossiblePoints={maxPossiblePoints}
+              answer={ansewr}
             />
             <Question
               question={questions[index]}
