@@ -1,11 +1,15 @@
-function Progress({ index, numQuestions }) {
+function Progress({ index, numQuestions, points, maxPossiblePoints }) {
   return (
     <header className="progress">
       <p>
         Question{" "}
         <strong>
-          {index} / {numQuestions}
+          {index + 1} / {numQuestions}
         </strong>
+      </p>
+
+      <p>
+        <strong>{points}</strong> / {maxPossiblePoints}
       </p>
     </header>
   );
