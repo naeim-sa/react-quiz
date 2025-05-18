@@ -1,10 +1,13 @@
 import { useEffect, useReducer } from "react";
+
 import Header from "./Header";
 import Main from "./Main";
 import Loader from "./Loader";
 import Error from "./Error";
 import StartScreen from "./StartScreen";
 import Question from "./Question";
+import Footer from "./Footer";
+import Timer from "./Timer";
 import NextButton from "./NextButton";
 import Progress from "./Progress";
 import FinishScreen from "./FinishScreen";
@@ -100,12 +103,15 @@ export default function App() {
               dispatch={dispatch}
               ansewr={ansewr}
             />
-            <NextButton
-              dispatch={dispatch}
-              ansewr={ansewr}
-              index={index}
-              numQuestions={numQuestions}
-            />
+            <Footer>
+              <Timer />
+              <NextButton
+                dispatch={dispatch}
+                ansewr={ansewr}
+                index={index}
+                numQuestions={numQuestions}
+              />
+            </Footer>
           </>
         )}
 
